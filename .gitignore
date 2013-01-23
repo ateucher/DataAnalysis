@@ -11,6 +11,8 @@ Desktop.ini
 ###########
 ## R/Rstudio
 ###########
-
+.RData
+.Rhistory
 *.Rproj
 .Rproj.user/
+.Rproj.user

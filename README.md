@@ -1,1 +1,1 @@
-#### This repo contains the materials for the data analysis MOOC offered by Coursera and taught by Jeff Leek
+#### This repo contains the materials (code, writeup, and data) for the data analysis MOOC offered by Coursera and taught by Jeff Leek
