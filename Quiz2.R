@@ -4,7 +4,7 @@
 ## and assign them to a vector simplyStats. Apply the nchar() function to 
 ## simplyStats to count the characters in each element of simplyStats. How 
 ## many characters long are the lines 2, 45, and 122?
-con <- url(url="http://simplystatistics.tumblr.com/", open="r")
+con <- url("http://simplystatistics.tumblr.com/", open="r")
 simplyStats <- readLines(con, n=150)
 close(con)
 answer2 <- nchar(simplyStats[c(2,45,122)])
