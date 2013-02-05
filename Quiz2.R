@@ -9,6 +9,8 @@ simplyStats <- readLines(con, n=150)
 answer <- nchar(simplyStats[c(2,45,122)])
 answer
 
+close(con)
+
 ## Question 3:
 # The American Community Survey distributes downloadable data about United
 # States communities. Download the 2006 microdata survey about housing for the
@@ -31,7 +33,6 @@ dataDictURL <- "https://spark-public.s3.amazonaws.com/dataanalysis/PUMSDataDict0
 download.file(url=dataFileURL, destfile="data/W2Q3_ss06hid.csv")
 download.file(url=dataDictURL, destfile="data/PUMSDataDict06.pdf")
 ID_Survey.df <- read.csv("data/W2Q3_ss06hid.csv")
-<<<<<<< HEAD
 answer <- nrow(ID_Survey.df[ID_Survey.df$VAL==24 & !is.na(ID_Survey.df$VAL),])
 answer
 
@@ -56,8 +57,5 @@ answer
 # What are the first 3 values that result?
 agricultureLogical <- ID_Survey.df$ACR==3 & !is.na(ID_Survey.df$ACR) & 
   ID_Survey.df$AGS==6 & !is.na(ID_Survey.df$AGS)
-which(agricultureLogical)
-=======
-answer <- nrow(ID_Survey.df[ID_Survey.df$VAL==24,])
+answer <- which(agricultureLogical)
 answer
->>>>>>> 89034f91a88e019dff702bbdcbaea476b72d60d3
