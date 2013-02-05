@@ -31,6 +31,7 @@ dataDictURL <- "https://spark-public.s3.amazonaws.com/dataanalysis/PUMSDataDict0
 download.file(url=dataFileURL, destfile="data/W2Q3_ss06hid.csv")
 download.file(url=dataDictURL, destfile="data/PUMSDataDict06.pdf")
 ID_Survey.df <- read.csv("data/W2Q3_ss06hid.csv")
+<<<<<<< HEAD
 answer <- nrow(ID_Survey.df[ID_Survey.df$VAL==24 & !is.na(ID_Survey.df$VAL),])
 answer
 
@@ -56,3 +57,7 @@ answer
 agricultureLogical <- ID_Survey.df$ACR==3 & !is.na(ID_Survey.df$ACR) & 
   ID_Survey.df$AGS==6 & !is.na(ID_Survey.df$AGS)
 which(agricultureLogical)
+=======
+answer <- nrow(ID_Survey.df[ID_Survey.df$VAL==24,])
+answer
+>>>>>>> 89034f91a88e019dff702bbdcbaea476b72d60d3
