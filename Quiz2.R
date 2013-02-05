@@ -40,10 +40,9 @@ answer3
 # How many households have 2 bedrooms and 7 total rooms?
 rooms.df <- data.frame(beds=c(3,2,2), total=c(4,5,7),nHouse=c(rep(NA,3)))
 for (i in 1:nrow(rooms.df)) {
-  rooms.df$nHouse[i] <- nrow(ID_Survey.df[ID_Survey.df$BDS==rooms.df[i,1] & 
-                                            ID_Survey.df$RMS==rooms.df[i,2] & 
-                                            !is.na(ID_Survey.df$BDS) & 
-                                            !is.na(ID_Survey.df$RMS),])
+  rooms.df$nHouse[i] <- length(which(ID_Survey.df$BDS==rooms.df[i,1] & 
+                                       ID_Survey.df$RMS==rooms.df[i,2]))
+  # Can also use sum(cond1 & cond2, na.rm=TRUE)
 }
 answer5 <- rooms.df$nHouse
 answer5
@@ -58,9 +57,8 @@ answer5
 # which(agricultureLogical) 
 
 # What are the first 3 values that result?
-agricultureLogical <- ID_Survey.df$ACR==3 & !is.na(ID_Survey.df$ACR) & 
-  ID_Survey.df$AGS==6 & !is.na(ID_Survey.df$AGS)
-answer6 <- which(agricultureLogical)[1:3]
+agricultureLogical <- ID_Survey.df$ACR==3 & ID_Survey.df$AGS==6
+answer6 <- which(agricultureLogical)[1:3] # which() treats NAs as FALSE
 answer6
 
 ## Question 7:
