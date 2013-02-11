@@ -1,13 +1,10 @@
 ############
 ## Windows
 ############
-
 # Windows image file caches
 Thumbs.db
-
 # Folder config file
 Desktop.ini
-
 ###########
 ## R/Rstudio
 ###########
@@ -15,4 +12,5 @@ Desktop.ini
 .Rhistory
 *.Rproj
 .Rproj.user/
-.Rproj.user
+.Rproj.user/*
+data/
