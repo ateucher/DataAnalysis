@@ -13,4 +13,8 @@ Desktop.ini
 *.Rproj
 .Rproj.user/
 .Rproj.user/*
+<<<<<<< HEAD
+=======
+data/
+>>>>>>> gitignore
 .Rproj.user
