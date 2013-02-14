@@ -29,6 +29,8 @@ answer2
 # How many housing units in this survey were worth more than $1,000,000?
 dataFileURL <- "https://dl.dropbox.com/u/7710864/data/csv_hid/ss06hid.csv"
 download.file(url=dataFileURL, destfile="data/W2Q3_ss06hid.csv", method="curl")
+download.file("https://spark-public.s3.amazonaws.com/dataanalysis/PUMSDataDict06.pdf"
+              , destfile="doc/PUMSDataDict06.pdf", mode="wb")
 
 ID_Survey.df <- read.csv("data/W2Q3_ss06hid.csv")
 answer3 <- nrow(ID_Survey.df[ID_Survey.df$VAL==24 & !is.na(ID_Survey.df$VAL),])

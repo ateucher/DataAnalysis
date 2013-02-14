@@ -13,4 +13,4 @@ Desktop.ini
 *.Rproj
 .Rproj.user/
 .Rproj.user/*
-data/
+.Rproj.user
